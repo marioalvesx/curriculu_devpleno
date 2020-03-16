@@ -1,8 +1,11 @@
 const express = require ('express')
 const port = process.env.port || 3000
 
+const CurriculoController = require('./controllers/curriculo-controller')
 const app = express();
+const path = require('path');
 
+app.use(express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
@@ -11,7 +14,8 @@ app.get('/', (req, res) => {
 
 // Redireciona para o arquivo do curriculo na pasta resume
 app.get('/resume', (req, res) => {
-    res.render('resume/index')
+    const curriculoData = CurriculoController.getData();
+    res.render('resume/index.ejs', curriculoData)
 })
 
 app.listen(port, error => {

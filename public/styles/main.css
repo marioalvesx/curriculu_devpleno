@@ -1,0 +1,12 @@
+/* Estilo da página principal do Curriculo */
+
+body {
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+    line-height: 2;
+    /* font-size: 12px; */
+}
+
+main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
