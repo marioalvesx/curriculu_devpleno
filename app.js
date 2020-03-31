@@ -4,6 +4,7 @@ const port = process.env.port || 3000
 const CurriculoController = require('./controllers/curriculo-controller')
 const app = express();
 const path = require('path');
+const createError = require('http-errors');
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
@@ -24,4 +25,18 @@ app.listen(port, error => {
     }else{
         console.log('Servidor ativo na porta '+port)
     }
+})
+
+// Tratamento para Erro 404
+app.use((req, res, next) => {
+    next(createError(404));
+});
+
+// Handler de erro
+app.use((err, req, res, next) => {
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development'?err:{};
+
+    res.status(err.status || 500);
+    res.render('error');
 })

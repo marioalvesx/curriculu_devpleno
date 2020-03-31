@@ -1,12 +1,65 @@
 /* Estilo da página principal do Curriculo */
 
 body {
+    text-align: center;
     font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
     line-height: 2;
-    /* font-size: 12px; */
+    padding-top: 10px;
+    /* width: 90%; */
+    background: rgb(255, 255, 255);
+}
+
+.spaceProfession {
+    border-radius: 50px;
+    top: 150px;
+    margin-top: 50px;
+    height: 30px;
+    width: 190px;
+}
+
+.spaceDescription {
+    margin-top: 30px;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-left: 15px;
+}
+
+h3{
+    font: 23px "Lucida Grande", Helvetica, Arial, sans-serif;
+    border-top: 40px;
+    text-align: center;    
+    font-weight: bold;
+    box-shadow: 2px 2px 8px 5px rgb(216, 216, 216);
+    border-radius: 50px;
+    background-color: mediumpurple;
+    margin-left: 10px;
+    padding: 7px 0px;
+    height: 40px;
+    width: 250px;
+}
+
+/* Separando o curriculo em 3 blocos verticais de cores diferentes */
+.Bloc-One{
+    background: #E4B7E5;
+    border-radius: 5px;
+    align-items: center;
+}
+
+/* Bloco de cima do .png do nome */
+.lh-100{
+    align-items: center;
+    box-shadow: 4px 5px 7px rgb(216, 216, 216);
+    padding-bottom: 20px;
+}
+
+/* Textos do corpo */
+p, ul, li {
+    text-align: left;
+    margin-left: 17px;
+    margin-right: 2px;
 }
 
 main, footer {
-    max-width: 960px;
     margin: 0 auto;
+    max-width: 100%;
 }
