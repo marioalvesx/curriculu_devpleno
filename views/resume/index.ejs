@@ -10,7 +10,7 @@
 </head>
 <body>
     <a href="/">Back</a>
-    <h2><strong>Welcome! This is my resume :) </strong> </h2>
+    <h1><strong>Welcome! This is my virtual resume :) </strong> </h1>
     <main>
 
         <div class="lh-100">
@@ -31,14 +31,14 @@
 
         <ul>
             <% experience.map(experience => {%>
-                <li>
-                    <div>
-                        <strong><%=experience.company %>: </strong>
-                        <strong><%=experience.office %>: </%=experience.office>
+                <a>
+                    <div class="experienceDesc">
+                        <h2><%=experience.company %>: </h2>
+                        <strong><%=experience.office %>:</strong>
                         <br>
                         <span><%=experience.description %></span>
                     </div>
-                </li>
+                </a>
             <% }); %>
         </ul>
 
