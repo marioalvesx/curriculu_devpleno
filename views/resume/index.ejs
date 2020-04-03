@@ -11,36 +11,35 @@
 <body>
     <a href="/">Back</a>
     <h1><strong>Welcome! This is my virtual resume :) </strong> </h1>
-    <main>
-
-        <div class="lh-100">
-            <div class="lh1-100">
-                <h1><%= title %></h1>
-                <a href="/"><img src="../assets/marioalves.png" alt="My name"></a>
-            </div>
+    <div class="lh-100">
+        <div class="lh1-100">
+            <h1><%= title %></h1>
+            <a href="/"><img src="../assets/marioalves.png" alt="My name"></a>
         </div>
+    </div>
 
+    <main role="main" class="container">
         <!-- my-3 p-3 bg-white rounded shadow-sm -->
         <div class="spaceProfession">
+            <img class="mr-3" src="../assets/computer.png" alt="" width="28" height="28">
             <h3><%= profession %></h3>                        
         </div>
-        <!-- border-bottom border-gray pb-2 mb-0 -->
-        <div class="spaceDescription"></div>
+        
+        <div class="proExperienceBlock">
             <p><%= description %></p>    
+            <ul>
+                <% experience.map(experience => {%>
+                    <a>
+                        <!-- <div class="experienceDesc"> -->
+                            <h2><%=experience.company %>: </h2>
+                            <strong><%=experience.office %>:</strong>
+                            <br>
+                            <span><%=experience.description %></span>
+                        <!-- </div> -->
+                    </a>
+                <% }); %>
+            </ul>
         </div>
-
-        <ul>
-            <% experience.map(experience => {%>
-                <a>
-                    <div class="experienceDesc">
-                        <h2><%=experience.company %>: </h2>
-                        <strong><%=experience.office %>:</strong>
-                        <br>
-                        <span><%=experience.description %></span>
-                    </div>
-                </a>
-            <% }); %>
-        </ul>
 
         <ul>
             <div class="card border-light mb-3">
