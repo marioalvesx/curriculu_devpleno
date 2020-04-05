@@ -17,7 +17,7 @@ const data = {
 
     education: [{
         institution: 'Ulbra Gravataí',
-        description: 'And other online courses like DevPleno.'
+        description: 'Online courses like DevPleno.'
     }],
 
     skills: ['backend', 'frontend', 'infra', 'mobile']   

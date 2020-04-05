@@ -14,7 +14,7 @@
     <div class="lh-100">
         <div class="lh1-100">
             <h1><%= title %></h1>
-            <a href="/"><img src="../assets/marioalves.png" alt="My name"></a>
+            <img class="name-img" src="../assets/marioalves.png" alt="My name">
         </div>
     </div>
 
@@ -26,43 +26,41 @@
         </div>
         
         <div class="proExperienceBlock">
-            <p><%= description %></p>    
-            <ul>
+            <p><%= description %>    
                 <% experience.map(experience => {%>
-                    <a>
-                        <!-- <div class="experienceDesc"> -->
-                            <h2><%=experience.company %>: </h2>
-                            <strong><%=experience.office %>:</strong>
-                            <br>
-                            <span><%=experience.description %></span>
-                        <!-- </div> -->
-                    </a>
+                    <h2><%=experience.company %>: </h2>
+                    <a><strong><%=experience.office %>:</strong></a>
+                    <br>
+                    <a><span><%=experience.description %></span></a>
+                <% }); %></p>
+        </div>
+
+        <div class="spaceAcademic">
+            <img class="mr-4" img class="mr-3" src="../assets/academic.png" alt="" width="28" height="28">
+            <h4>Academic experiences</h4>
+        </div>
+
+        <div class="academicExperienceBlock">
+            <p><% education.map(education => { %>
+                <h2><%= education.institution %></h2>                
+                <a><strong>Other experiences</strong></a>
+                <br>
+                <a><span><%= education.description %></span></a>
+            <% }); %></p>
+        </div>
+
+        <div class="spaceSkills">
+            <img class="mr-4" img class="mr-3" src="../assets/skills.png" alt="" width="35" height="35">
+            <h5>Skills</h5>
+        </div>
+
+        <div class="skillsBlock">
+            <ul>
+                <% skills.map(skill => { %>
+                    <li><%= skill %></li>
                 <% }); %>
             </ul>
         </div>
-
-        <ul>
-            <div class="card border-light mb-3">
-                <div class="card-header">Academic experiences</div>
-                <div class="experienceDesc">
-                    <% education.map(education => { %>
-                        <li>
-                            <div>
-                                <strong><%= education.institution %></strong>
-                                <br>
-                                <span><%= education.description %></span>
-                            </div>
-                        </li>
-                    <% }); %>
-                </div>
-            </div>
-        </ul>
-
-        <ul>
-            <% skills.map(skill => { %>
-                <li><%= skill %></li>
-            <% }); %>
-        </ul>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
