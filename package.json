@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "node_modules/nodemon/bin/nodemon.js app.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,5 @@
     "express": "^4.17.1",
     "http-errors": "^1.7.3"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+  "devDependencies": {}
 }
