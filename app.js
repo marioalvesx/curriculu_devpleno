@@ -1,9 +1,9 @@
 const express = require ('express')
-const port = process.env.port || 3000
-
-const CurriculoController = require('./controllers/curriculo-controller')
 const app = express();
 const path = require('path');
+
+const port = process.env.port || 3000
+const CurriculoController = require('./controllers/curriculo-controller')
 const createError = require('http-errors');
 
 app.use(express.static(path.join(__dirname, 'public')))
