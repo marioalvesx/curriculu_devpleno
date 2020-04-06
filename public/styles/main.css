@@ -12,7 +12,7 @@ body {
     position: absolute;
     top: 25%; /* Original: 50%, alterei para colocar na posição que eu necessitava. */
     left: 50%;
-    margin-top: -10px;  /* metade do valor da altura negativa em PX */
+    margin-top: 10px;  /* metade do valor da altura negativa em PX */
     margin-left: -135px; /* metade do valor da largura negativa em PX */
 }
 
